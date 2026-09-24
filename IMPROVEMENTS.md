@@ -70,19 +70,15 @@ The application has been significantly enhanced with modern UI/UX improvements, 
 ## Files Changed
 
 ### `app_improved.py`
-New version with all UI/UX improvements:
+Flask application with all UI/UX improvements:
 - Enhanced HTML template
 - Modern CSS with design system
 - Improved JavaScript functionality
 - Better error handling
 - localStorage integration
 
-### `app.py.backup`
-Backup of original version
-
 ## How to Use
 
-### Running the Improved Version
 ```bash
 python3 app_improved.py
 ```
@@ -143,20 +139,6 @@ Open browser to: `http://localhost:5001`
 - Export to PDF
 - Email notifications
 - API documentation integration
-
-## Migration from Original Version
-Simply replace `app.py` with `app_improved.py`. No configuration changes needed.
-
-```bash
-# Backup original
-cp app.py app.py.backup
-
-# Use improved version
-cp app_improved.py app.py
-
-# Run
-python3 app.py
-```
 
 ## Support
 For issues or questions, please refer to the help modal in the application (press Ctrl+K or click the Help button).

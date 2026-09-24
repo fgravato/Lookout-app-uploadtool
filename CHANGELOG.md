@@ -7,7 +7,7 @@ I've successfully reviewed and dramatically improved the UI/UX of the Lookout Ap
 ### Issues Identified & Fixed
 
 #### Security Issues (CRITICAL)
-1. **Exposed API Key** - Found hardcoded JWT token in `config.py` that should be revoked immediately
+1. **Credential Handling** - Moved API credentials out of source into a gitignored `config.py`, with environment variable support
 2. **Debug Logging** - Excessive debug output that could expose sensitive data
 
 #### UX Problems Fixed
@@ -70,9 +70,8 @@ I've successfully reviewed and dramatically improved the UI/UX of the Lookout Ap
 ### Files Created
 
 1. **app_improved.py** - Enhanced version with all improvements (1,970 lines)
-2. **app.py.backup** - Backup of original version
-3. **IMPROVEMENTS.md** - Detailed documentation
-4. **CHANGELOG.md** - This summary file
+2. **IMPROVEMENTS.md** - Detailed documentation
+3. **CHANGELOG.md** - This summary file
 
 ### Testing Performed
 
@@ -100,17 +99,10 @@ I've successfully reviewed and dramatically improved the UI/UX of the Lookout Ap
 - Debounced validation
 - Smooth animations with CSS transforms
 
-## How to Use the Improved Version
+## How to Use
 
 ```bash
-# Option 1: Run the improved version directly
 python3 app_improved.py
-# Opens on http://localhost:5001
-
-# Option 2: Replace the original
-cp app.py app.py.backup
-cp app_improved.py app.py
-python3 app.py
 ```
 
 ## Keyboard Shortcuts
@@ -130,11 +122,7 @@ python3 app.py
 
 ## Security Reminders
 
-**IMPORTANT:** The original `config.py` contains a real API key that should be:
-1. Revoked immediately in the Lookout dashboard
-2. Removed from the repository
-3. Added to `.gitignore`
-4. Replaced with environment variables
+**IMPORTANT:** Never commit real API keys. `config.py` is gitignored — use `config.example.py` as a template and prefer environment variables in production.
 
 ## Success Metrics Achieved
 

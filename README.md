@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### 2. Run the Application
 
 ```bash
-python app.py
+python app_improved.py
 ```
 
 ### 3. Open in Browser
@@ -135,8 +135,7 @@ Navigate to: **http://localhost:5000**
 
 ```
 lookout-app-submissiontool/
-├── app_improved.py          # Enhanced Flask application with improved UI/UX
-├── app.py                   # Original Flask application
+├── app_improved.py          # Flask application
 ├── config.py                # API configuration (DO NOT COMMIT REAL KEYS)
 ├── requirements.txt         # Python dependencies
 ├── README.md                # This file
@@ -148,7 +147,7 @@ lookout-app-submissiontool/
 
 ## File Size Limits
 
-- Maximum upload: 2GB (configurable in `app.py`)
+- Maximum upload: 2GB (configurable in `app_improved.py`)
 - Supported formats: `.ipa`, `.apk`, `.aab`
 
 ## Security Notes
